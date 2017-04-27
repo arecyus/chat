@@ -3,25 +3,31 @@
 <html>
     <head>
         <meta charset="utf-8">
-
+        <link rel="stylesheet" href="/css/style.css">
     </head>
 
-    <body>
-        <p>Chat</p>
+    <body class="chat">
+        <div class="chat__sidebar">
+            <h3>Personas</h3>
+            <div id="users"></div>
+        </div>
 
-        <ol id="messages">
+        <div class="chat__main">
 
-        </ol>
+            <ol id="messages" class="chat__messages"></ol>
+            <div class="chat__footer">
+                <form id="message-form">
+                    <input name="message" type="text" placeholder="Message" autofocus autocomplete="off" />
+                    <button>Enviar</button>
+                </form>
 
-        <form id="message-form">
-            <input name="message" type="text" placeholder="Message" />
-            <button>Enviar</button>
-        </form>
-
-        <button id="send-location">Enviar lugar</button>
+                <button id="send-location">Enviar posicion</button>
+            </div>
+        </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.2.1.min.js"></script>
+    <script src="/js/libs/moment.js"></script>
     <script src="/js/index.js"></script>
     </body>
 </html>
